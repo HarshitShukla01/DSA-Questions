@@ -19,15 +19,34 @@ void  printBST(Node* root)
    printBST(root->right);
 }
 
+Node* insertBST(Node* root,int k)
+{
+  if(root == NULL) return new Node(k);
+
+  if(root->data>k)
+    root->left = insertBST(root->left,k);
+  else
+    root->right = insertBST(root->right,k);
+
+  return root;
+}
+Node* preToBST(int pre[],int n)
+{
+  Node* rt = NULL;
+  rt= insertBST(rt,pre[0]);
+  for(int i=1;i<n;i++)
+  {
+      insertBST(rt,pre[i]);
+  } 
+  return rt;
+}
 int main()
 {
 
-  Node* root = new Node(4);
-  root->left = new Node(2);
-  root->right = new Node(5);
-  root->left->left = new Node(1);
-  root->left->right = new Node(3);
-  root->right->right = new Node(6);
-
+  Node* root = NULL;
+  int pre[] = { 10, 5, 1, 7, 40, 50 };
+  int n = sizeof(pre) / sizeof(pre[0]);
+  root= preToBST(pre,n);
+  printBST(root);
 
 }
