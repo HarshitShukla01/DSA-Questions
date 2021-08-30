@@ -1,1 +1,1 @@
-if(!ltr) reverse(arr.begin()+m,arr.end());
+return
