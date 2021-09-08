@@ -48,8 +48,8 @@ vector<int> bfs_traversal(vector<int> adj[],int n)
     queue<int> q;
     vector<int> v;
     map<int,int> mp;
-    q.push(1);
-    mp[1]=1;
+    q.push(adj[0][0]);
+    mp[adj[0][0]]=1;
     while(!q.empty())
     {
         int k = q.front();
@@ -60,7 +60,7 @@ vector<int> bfs_traversal(vector<int> adj[],int n)
             int val = adj[k][it];
             if(mp.find(val)==mp.end())
             {
-                
+                cout<<"k = "<<k<<" , val = "<<val<<endl;
                 mp[val]=1;
                 q.push(val);
             }
@@ -80,13 +80,13 @@ int main()
     vi adj[n+1]; //2-D vector of elements filled zero initaly
     
     input_adjancey(adj,n);
-    output_adjancey(adj,n);
+   // output_adjancey(adj,n);
 
     // fillValue();   //use this or use map
     
     vi arr = bfs_traversal(adj,n);
 
-    cout<<"bfs = ";
+    cout<<" bfs = ";
     for(int i=0;i<arr.size();i++)
     cout<<arr[i]<<" ";
   
