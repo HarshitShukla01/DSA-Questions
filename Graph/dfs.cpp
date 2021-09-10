@@ -50,7 +50,16 @@ void solve(int n,map<int,int>& mp,vector<int>adj[])
 {
     mp[n]=1;
     ret.push_back(n);
-     for(auto it=0;it<adj[n].size();it++)
+    
+    for(auto x:adj[n])
+    {
+        if(!mp[x])
+        solve(x,mp,adj);
+    }
+
+    /*
+    //use above way or this way
+    for(auto it=0;it<adj[n].size();it++)
      {
          int val = adj[n][it];
          if(mp.find(val)==mp.end()) 
@@ -58,11 +67,7 @@ void solve(int n,map<int,int>& mp,vector<int>adj[])
             solve(val,mp,adj);
          }
      }
-    for(auto x:adj[n])
-    {
-        if(!mp[x])
-        solve(x,mp,adj);
-    }
+     */
 }
 
 vector<int> dfs_traversal(vector<int> adj[],int n)
