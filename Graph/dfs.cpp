@@ -70,12 +70,6 @@ void solve(int n,map<int,int>& mp,vector<int>adj[])
      */
 }
 
-vector<int> dfs_traversal(vector<int> adj[],int n)
-{
-  map<int,int> mp;
-  solve(1,mp,adj);
-  return ret;
-}
 
 int main()
 {
