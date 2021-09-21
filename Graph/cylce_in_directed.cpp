@@ -33,8 +33,8 @@ bool isCycle(int index,vector<vector<int>> adj,vector<int>& st_arr,vector<bool>&
 
 void find_cycle(int n,vector<vector<int>> adj)
 {
-   vector<int> st_arr(n,0);
-   vector<bool> vis(n,0);
+   vector<int> st_arr(n+1,0);
+   vector<bool> vis(n+1,0);
    bool cycle=false;
 
    for(int i=1;i<=n;i++)
