@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void dijktras(int n,vector<vector<pair<int,int>> adj,int source)
+void dijktras(int n,vector<vector<pair<int,int>>> adj,int source)
 {
     set<pair<int,int>> s;
     unordered_map<int,int> mp;
@@ -45,7 +45,7 @@ int main()
     cin>>n;
     cout<<"Number of Edges = ";
     cin>>m;
-    vector<vector<pair<int,int>> adj(n+1);
+    vector<vector<pair<int,int>>> adj(n+1);
 
     for(int i=0;i<m;i++)
     {
