@@ -7,7 +7,8 @@ struct Node {
     Node(int value)
     {
         data=value;
-        right=left=NULL;
+        right=NULL;
+        left=NULL;
     }
 };
 
