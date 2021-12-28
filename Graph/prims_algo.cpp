@@ -11,7 +11,7 @@ int prims(int n,vector<vector<pair<int,int>>> adj)
     {
         auto x = s.begin();
         s.erase(x);
-        cout<<"> "<<x->first<<" , "<<x->second<<endl;
+        // cout<<"> "<<x->first<<" , "<<x->second<<endl;
         if(!mp[x->second])
         mp[x->second]=1;
         else 
@@ -20,7 +20,7 @@ int prims(int n,vector<vector<pair<int,int>>> adj)
         cost = cost + x->first;
         for(auto i : adj[x->second])
         {
-            cout<<">> "<<i.second<<" , "<<i.first<<endl;
+            // cout<<">> "<<i.second<<" , "<<i.first<<endl;
             s.insert({i.second,i.first});
         }
     }
@@ -30,9 +30,9 @@ int prims(int n,vector<vector<pair<int,int>>> adj)
 int main()
 {
     int n,m; 
-    cout<<"Number of Nodes = ";
+    // cout<<"Number of Nodes = ";
     cin>>n;
-    cout<<"Number of Edges = ";
+    // cout<<"Number of Edges = ";
     cin>>m;
     vector<vector<pair<int,int>>> adj(n+1);
 

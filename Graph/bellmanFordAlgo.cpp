@@ -17,7 +17,7 @@ int main()
     }
     
     int src = 0;
-    vector<int> dist(n+1,INF);
+    vector<int> dist(n,INF);
 
     dist[src] = 0;
 
@@ -30,7 +30,7 @@ int main()
     	}
     }
 
-    for(int i=0;i<=n;i++)
+    for(int i=0;i<n;i++)
     {
     	cout<<"i = "<<i<<" , dist = "<<dist[i]<<endl;
     }
