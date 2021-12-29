@@ -1,10 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-const int INF = 1e9;
-bool sortcol( const vector<int>& v1,const vector<int>& v2 ) {
- return v1[2] < v2[2];
-}
+
 int main()
 {
     int n,m;
@@ -22,8 +19,6 @@ int main()
   
     int src = 0;
     vector<int> dist(n,INF);
-
-    // dist[src] = 0;
 
 
     dist[edges[0][0]] = 0;
