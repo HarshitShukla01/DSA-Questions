@@ -4,3 +4,5 @@ Graph/bin
 Graph/input.txt
 Graph/output.txt
 stl/bin
+*.exe
+*.exe~

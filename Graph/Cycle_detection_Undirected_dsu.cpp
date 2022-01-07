@@ -52,8 +52,27 @@ int main()
 		int u = i[0],v=i[1];
 		int x = find_set(u), y = find_set(v);
 		if(x==y) {cycle=true; break;}
+		else
 		union_set(x,y);
 	}
-	cout<<"is cycle present ? = "<<cycle;
 
+	if(cycle) cout<<"cycle is present";
+	else cout<<"cycle is not present";
 }
+/* 
+//present
+4 5
+0 1
+0 2
+0 3
+1 3
+2 3
+*/
+
+/* 
+//not present
+4 3
+0 1
+0 2
+0 3
+*/
