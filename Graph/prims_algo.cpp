@@ -5,7 +5,7 @@ int prims(int n,vector<vector<pair<int,int>>> adj)
 {
     set<pair<int,int>> s;
     unordered_map<int,int> mp;
-    s.insert({0,0});
+    s.insert({0,0});  //wight,vertex
     int cost=0;
     while(!s.empty())
     {
@@ -30,10 +30,7 @@ int prims(int n,vector<vector<pair<int,int>>> adj)
 int main()
 {
     int n,m; 
-    // cout<<"Number of Nodes = ";
-    cin>>n;
-    // cout<<"Number of Edges = ";
-    cin>>m;
+    cin>>n>>m;
     vector<vector<pair<int,int>>> adj(n+1);
 
     for(int i=0;i<m;i++)
@@ -44,5 +41,6 @@ int main()
         adj[t].push_back({r,w});  
     }
     
+
     cout<<"cost = "<<prims(n,adj);
 }
