@@ -29,16 +29,28 @@ int main()
     		dist[v]=min(dist[v],w+dist[u]);
     	}
     }
-
-    for(int i=0;i<n;i++)
+     
+    int flag =0 ;
+    for(auto e:edges)
     {
-    	cout<<"i = "<<i<<" , dist = "<<dist[i]<<endl;
+        int u=e[0],v=e[1],w=e[2];
+
+        if(dist[u]!=INF && dist[v]>w+dist[u])
+        {
+            flag=1;
+            break;
+        }
+        
     }
+
+    if(flag == 1) cout<<"YES";
+    else cout<<"NO";
 
 	
 }
 
 /*
+//NO
 6 8
 1 2 3
 3 2 5
@@ -52,9 +64,10 @@ int main()
 
 
 /*
+//YES
 4 4
-0 1 2
-0 2 3
+0 1 1
+1 2 -1
 2 3 -1
-1 2 1
+3 0 -1
 */
