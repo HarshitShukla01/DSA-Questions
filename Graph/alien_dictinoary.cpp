@@ -43,7 +43,6 @@ string findOrder(string dict[], int N, int K) {
 int main()
 {
    int N = 3, K = 3;
-string dict[] = {"caa","aaa","aab"};
-    cout<<findOrder(dict,N,K);
- 
+   string dict[] = {"caa","aaa","aab"};
+   cout<<findOrder(dict,N,K);
 }
