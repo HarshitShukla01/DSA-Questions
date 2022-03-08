@@ -3,10 +3,13 @@ Binary_Search_Tree/bin
 Graph/bin
 Graph/input.txt
 Graph/output.txt
+Dynamic_Programming/bin
 Dynamic_Programming/input.txt
 Dynamic_Programming/output.txt
+Stack_and_Queues/bin
 Stack_and_Queues/input.txt
 Stack_and_Queues/output.txt
+Searching_and_Sorting/bin
 Searching_and_Sorting/input.txt
 Searching_and_Sorting/output.txt
 stl/bin
